@@ -124,7 +124,7 @@ connection.onCompletion((position: TextDocumentPositionParams): CompletionItem[]
         return pagesHandler.getCompletion(line, position.position);
     }
     if (handleSteps()) {
-        return stepsHandler.getCompletion(line, position.position);
+        return stepsHandler.getCompletion(line, position.position, text);
     }
 });
 
