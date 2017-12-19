@@ -1,13 +1,13 @@
 {
-    "name": "cucumberautocomplete",
-    "version": "2.5.0",
-    "publisher": "alexkrechik",
+    "name": "behaveautocomplete",
+    "version": "0.0.1",
+    "publisher": "aw2003",
     "engines": {
         "vscode": "^1.18.0"
     },
     "license": "MIT",
-    "displayName": "Cucumber (Gherkin) Full Support",
-    "description": "VSCode Cucumber (Gherkin) Full Language Support + Formatting + Autocomplete",
+    "displayName": "Cucumber (Gherkin) Full Support for Behave",
+    "description": "VSCode Behave Cucumber (Gherkin) Full Language Support + Formatting + Autocomplete",
     "categories": [
         "Languages"
     ],
@@ -15,16 +15,25 @@
         "gherkin",
         "cucumber",
         "feature",
-        "autocomplete"
+        "autocomplete",
+        "behave"
     ],
     "main": "./out/src/extension",
     "activationEvents": [
         "onLanguage:feature",
         "workspaceContains:.vscode/settings.json"
     ],
-    "author": "Alexander Krechik",
+    "author": "Andrew Watt",
     "icon": "img/icon.png",
     "contributes": {
+        "keybindings": [
+            {
+                "win": "ctrl+alt+f",
+                "key": "ctrl+alt+f",
+                "command": "gherkinHelpLookup",
+                "when": "editorFocus"
+            }
+        ],
         "languages": [
             {
                 "id": "feature",
@@ -54,7 +63,7 @@
             }
         ],
         "configuration": {
-            "title": "Cucumber Auto Complete settings",
+            "title": "Gherkin Behave Auto Complete settings",
             "properties": {
                 "cucumberautocomplete.steps": {
                     "description": "Path or array of glob-style-pathes to the steps files",
@@ -97,6 +106,7 @@
         "vscode": "^1.1.10"
     },
     "dependencies": {
-        "vscode-languageclient": "^3.5.0"
+        "vscode-languageclient": "^3.5.0",
+        "opn": "^5.0.0"
     }
 }
