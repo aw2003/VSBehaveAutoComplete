@@ -39,7 +39,6 @@ export function activate(context: ExtensionContext) {
 		// Open the page by executing the URL as a command: use opnfor this. The system will open the URL in
 		// the default browser for the Windows machine (this extension is designed for use with windows only).
 		const opn = require('opn');
-		// opn(searchURL, { app: args });
 		opn(searchURL);
 	} )
 	
